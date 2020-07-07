@@ -24,8 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(btn => {
         btn.addEventListener('click', deleteElement, {once: true});
-    })
-
+    });
+    
     const link = document.querySelector('a');
 
     link.addEventListener('click', function(event) {
