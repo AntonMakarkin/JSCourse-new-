@@ -38,9 +38,9 @@ let ivan = new User('Ivan', 23);*/
 
 const user = {
     name: 'John'
-};*/
+};
 
-/*sayName.call(user, 'Smith'); //put context
+sayName.call(user, 'Smith'); //put context
 sayName.apply(user, ['Smith']); //put context
 
 function count(num) {
