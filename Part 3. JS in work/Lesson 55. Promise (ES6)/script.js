@@ -53,8 +53,6 @@ req.then((product) => {
 });
 
 
-
-
 const test = time => {
     return new Promise(resolve => {
         setTimeout(() => resolve(), time);
