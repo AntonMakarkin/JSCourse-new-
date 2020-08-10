@@ -1,8 +1,10 @@
 const btn = document.querySelector('.btn');
+const elem = document.querySelector('.box');
 let timerId,
-    i = 0;
+    i = 0,
+    pos = 0;
 
-function myAnimation() {
+/*function myAnimation() {
     const elem = document.querySelector('.box');
     let pos = 0;
 
@@ -17,9 +19,23 @@ function myAnimation() {
             elem.style.left = pos + "px";
         }
     }
+}*/
+
+function myAnimation() {
+    pos++;
+    elem.style.top = pos + "px";
+    elem.style.left = pos + "px";
+
+    if (pos < 300) {
+        requestAnimationFrame(myAnimation);
+    }
+
 }
 
-btn.addEventListener('click', myAnimation);
+btn.addEventListener('click', () => requestAnimationFrame(myAnimation));
+
+let id = requestAnimationFrame(myAnimation);
+cancelAnimationFrame(id);
 
 /*btn.addEventListener('click', () => {
     //const timerId = setTimeout(logger, 2000);
